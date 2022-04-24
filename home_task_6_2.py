@@ -40,6 +40,7 @@ def main():
         sheet[chr(66 + i) + '3'] = info[i][0]
     for i in range(len(data.keys())):
         sheet[chr(66 + i) + '4'] = info[i][3]
+    sheet['A4'] = 'Number'
     book.save('my_book2.xlsx')
     book.close()
 
