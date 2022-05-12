@@ -70,6 +70,7 @@
 import os
 
 
+
 def print_docs(directory):
     if not os.path.exists(directory):
         raise FileNotFoundError('Данный файл не существует!')
