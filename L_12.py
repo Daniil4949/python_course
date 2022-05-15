@@ -14,17 +14,17 @@ class City:
 
     def define_city(self) -> str:
 
-        if re.fullmatch(r'220000', self.__index):
+        if re.fullmatch(r'220\d\d\d', self.__index):
             return 'Minsk'
-        elif re.fullmatch(r'224000', self.__index):
+        elif re.fullmatch(r'224\d\d\d', self.__index):
             return 'Brest'
-        elif re.fullmatch(r'210000', self.__index):
+        elif re.fullmatch(r'210\d\d\d', self.__index):
             return 'Vitebsk'
-        elif re.fullmatch(r'246000', self.__index):
+        elif re.fullmatch(r'246\d\d\d', self.__index):
             return 'Gomel'
-        elif re.fullmatch(r'212000', self.__index):
+        elif re.fullmatch(r'212\d\d\d', self.__index):
             return 'Mogilev'
-        elif re.fullmatch(r'230000', self.__index):
+        elif re.fullmatch(r'230\d\d\d', self.__index):
             return 'Grodno'
         elif len(self) != 6:
             raise IndexError('This city does not exist.')
@@ -32,7 +32,9 @@ class City:
             raise IndexError('This city is not a regional center.')
 
 
-city1 = City('220000')
+city1 = City('246000')
+city2 = City('246028')
+print(city2.define_city())
 print(city1.define_city())
 print(city1)
 
