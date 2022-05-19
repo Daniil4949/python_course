@@ -1,6 +1,6 @@
 from peewee import *
 
-db = MySQLDatabase("lesson", user="root", password="A123BC%xyRW", host="localhost")
+db = MySQLDatabase("lesson", user="root", password="*", host="localhost")
 #print(db)
 
 # SELECT example1.Cat, example1.Part, example2.Cat_name,
@@ -62,7 +62,7 @@ def connect(name_db, user_name, user_password, user_host):
         print('Something went wrong.')
 
 
-connect(name_db='lesson', user_name='root', user_password='A123BC%xyRW', user_host='localhost')
+connect(name_db='lesson', user_name='root', user_password='*', user_host='localhost')
 
 #Example2.drop_table()
 #Example1.drop_table()
